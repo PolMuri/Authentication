@@ -1,0 +1,8 @@
+{
+	"users": [
+    	{
+        	"nom": "nom_usuari",
+        	"token": "authentication-token"
+    	}
+	]
+}
