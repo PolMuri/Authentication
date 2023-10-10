@@ -1,4 +1,5 @@
 ###Registre d'Usuaris i Generació de Tokens
+
 ##Aquest programa, anomenat register.py, és una eina senzilla que permet registrar usuaris i generar tokens d'autenticació. Els usuaris s'emmagatzemen en un fitxer db.json, que actua com a base de dades en format JSON. Cada usuari es registra amb la seva adreça de correu electrònic i es genera un token aleatori de 32 caràcters que s'associa amb aquest usuari.
 
 Com Utilitzar el Programa
