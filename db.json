@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "email": "pol@montilivi.gat",
+            "token": "-q7Xjxtjb9eEwXZ3GCCKZ1LIRZ8Z4HG2"
+        },
+        {
+            "email": "provaseguretat@dragonball.cat",
+            "token": "bIWFlu3cmnmDlCao3aes713Jox_N1R9_"
+        },
+        {
+            "email": "provaprova@dragonball.cat",
+            "token": "SPP7jaN7Zd-40-IpDH-zHGVzcB_eR0iz_qzluFlF2X4"
+        },
+        {
+            "email": "pau@montilivi.gat",
+            "token": "fkinjoOV5ZI4eyBt01vs0n_tmHuLh3SB"
+        },
+        {
+            "email": "charlie@montilivi.gat",
+            "token": "T6bG0YZWm82hU0axxOrRomFjY9hcM8TH"
+        },
+        {
+            "email": "bola@montilivi.gat",
+            "token": "vLoQhSws_p8NUBlocITxU_MCWU6UsC7y"
+        }
+    ]
+}
