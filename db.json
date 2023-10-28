@@ -1,28 +1,22 @@
 {
     "users": [
         {
-            "email": "pol@montilivi.gat",
-            "token": "-q7Xjxtjb9eEwXZ3GCCKZ1LIRZ8Z4HG2"
+            "email": "jelou@san.email",
+            "token": null,
+            "hash": "b180958359dd5448ab9d1561a50549cfd511162a6665503b6f9f0b61bd1eb730",
+            "salt": "346e7751ee4eab2fd387a628012276917de6f293"
         },
         {
-            "email": "provaseguretat@dragonball.cat",
-            "token": "bIWFlu3cmnmDlCao3aes713Jox_N1R9_"
+            "email": "bueno@san.email",
+            "token": null,
+            "hash": "2a759601b0073e4f2913a8a35052d1270b4ce5a7e5e6502ee2f5404d7ebcb3eb",
+            "salt": "1add121e4a6529371c0798e8df4a184c2a0bd1b2"
         },
         {
-            "email": "provaprova@dragonball.cat",
-            "token": "SPP7jaN7Zd-40-IpDH-zHGVzcB_eR0iz_qzluFlF2X4"
-        },
-        {
-            "email": "pau@montilivi.gat",
-            "token": "fkinjoOV5ZI4eyBt01vs0n_tmHuLh3SB"
-        },
-        {
-            "email": "charlie@montilivi.gat",
-            "token": "T6bG0YZWm82hU0axxOrRomFjY9hcM8TH"
-        },
-        {
-            "email": "bola@montilivi.gat",
-            "token": "vLoQhSws_p8NUBlocITxU_MCWU6UsC7y"
+            "email": "provaflamenca@montilivi.com",
+            "token": null,
+            "hash": "efcfc78d090ea3d4b98b7498c581223e9f5a431999fb21d2a03f686ebbca85ff",
+            "salt": "89d347772799cbd6762ade099930c1f469e6af59"
         }
     ]
 }
