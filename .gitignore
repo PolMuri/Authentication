@@ -2,4 +2,8 @@ bd.json
 db.json
 db2.json
 oauthProva.py
+*.pem
+pem
+private.pem
+receiver.pem
 
