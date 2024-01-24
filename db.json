@@ -41,6 +41,12 @@
             "token": null,
             "hash": "2e4baf1021e644af0d7dc27d501204b6659f1cf806fa28c30c5e824d4fba954c",
             "salt": "24a52a8f74c0a7ef01c7d3c14994e0ceeec66ea0"
+        },
+        {
+            "email": "vinijr@prova.es",
+            "token": null,
+            "hash": "8e033f78c140a4ba445bb17d0246e6b79fe8fca8a0919008c5fb494d3f13304c",
+            "salt": "a70fdf791eade0fccc7786daeddda1bd22eb69c1"
         }
     ]
 }
