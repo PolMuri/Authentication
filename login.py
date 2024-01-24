@@ -12,7 +12,7 @@ import core
 def generar_certs_si_no_existixen():
     if not os.path.exists("pem"):
         os.makedirs("pem")
-    if not os.path.exists("pem/private.pem") or not os.path.exists("pem/receiver.pem"):
+    if not os.path.exists("pem/private.pem") or not os.path.exists("pem/public.pem"):
         # Generar claus si no existeixen
         key = RSA.generate(2048)
 
@@ -21,7 +21,7 @@ def generar_certs_si_no_existixen():
             file_out.write(private_key)
 
         public_key = key.publickey().export_key()
-        with open("pem/receiver.pem", "wb") as file_out:
+        with open("pem/public.pem", "wb") as file_out:
             file_out.write(public_key)
 
 # Executa aquesta funció al principi del teu script
@@ -44,7 +44,8 @@ def carregar_base_dades():
 def validar_contrasenya(email, password, database):
     for user in database:
         if user['email'] == email:
-            salt = user['salt']  # Obtenir el salt emmagatzemat al db.json
+            # Obtenir el salt emmagatzemat al db.json
+            salt = user['salt']  
             # Generar el hash utilitzant PBKDF2
             password_hash = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt.encode('utf-8'), 100000).hex()
             if password_hash == user['hash']:

@@ -4,6 +4,7 @@ import json
 from datetime import datetime, timedelta, timezone
 
 def update_user_token(data, token, password):
+    # Funció per actualitzar la informació d'un usuari en base al token i contrasenya proporcionats.
     for user in data["users"]:
         if user["token"] == token:
             user["token"] = None
@@ -12,8 +13,7 @@ def update_user_token(data, token, password):
             user["hash"] = password_hash.hex()
             user["salt"] = salt
 
-
-
+# Importació de mòduls de la llibreria jwt
 from jwt import (
     JWT,
     jwk_from_dict,
@@ -22,7 +22,7 @@ from jwt import (
 from jwt.utils import get_int_from_datetime
 
 def crearBearer (mail):
-
+    # Funció per crear un token JWT (JSON Web Token) a partir de l'adreça de correu.
     instance = JWT()
 
     message = {
@@ -32,17 +32,13 @@ def crearBearer (mail):
             datetime.now(timezone.utc) + timedelta(hours=1)),
     }
 
-    """
-    Encode the message to JWT(JWS).
-    """
-
+    # Codifica el missatge com a JWT (JWS).
    
-    # Or load a RSA key from a PEM file.
+    # O carrega una clau RSA des d'un fitxer PEM.
     with open('pem/private.pem', 'rb') as fh:
         signing_key = jwk_from_pem(fh.read())
-    # You can also load an octet key in the same manner as the RSA.
+    # També es pot carregar una clau octet de la mateixa manera que la clau RSA.
     # signing_key = jwk_from_dict({'kty': 'oct', 'k': '...'})
 
     compact_jws = instance.encode(message, signing_key, alg='RS256')
     return compact_jws
-    
