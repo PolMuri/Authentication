@@ -1,23 +1,34 @@
-###Registre d'Usuaris i Generació de Tokens
+Authentication
 
-##Aquest programa, anomenat register.py, és una eina senzilla que permet registrar usuaris i generar tokens d'autenticació. Els usuaris s'emmagatzemen en un fitxer db.json, que actua com a base de dades en format JSON. Cada usuari es registra amb la seva adreça de correu electrònic i es genera un token aleatori de 32 caràcters que s'associa amb aquest usuari.
+Funcionalitats
 
-Com Utilitzar el Programa
-Per utilitzar el programa, segueix aquests passos:
+register.py Aquest script permet registrar nous usuaris i generar tokens d'autenticació. Utilitza el fitxer db.json com a base de dades per emmagatzemar la informació dels usuaris.
+Comandament d'ús:
 
-Assegura't de tenir Python 3 instal·lat al teu sistema.
+$ python3 register.py -e "correu@exemple.com"
 
-Obre una terminal o línia de comandes i navega fins al directori on es troba l'arxiu register.py.
+init.py Aquest script permet inicialitzar contrasenyes per als usuaris existents. Busca un usuari pel seu token i emmagatzema un hash segur de la contrasenya dins de db.json.
+Comandament d'ús:
 
-Executa el programa utilitzant la següent comanda i substitueix correu@example.com per l'adreça de correu electrònic que desitges registrar:
+$ python3 init.py -t token -p password
 
-`python3 register.py -e "correu@example.com"`
+login.py Aquest script facilita el procés de login per als usuaris registrats. Genera un token bearer d'autenticació per a l'usuari proporcionat.
+Comandament d'ús:
 
-El programa generarà un token aleatori i l'associarà amb l'adreça de correu electrònic proporcionada. També mostrarà el token a la pantalla.
+$ python3 login.py -e correu@exemple.com -p 1234
 
-Fitxer db.json
-El programa utilitza un fitxer anomenat db.json per emmagatzemar les dades dels usuaris registrats. Assegura't que aquest fitxer es trobi en el mateix directori que register.py. Si l'arxiu no existeix, el programa el crearà automàticament.
+verify.py Aquest script permet verificar un bearer token JWT i mostrar el seu contingut (payload). S'ha de proporcionar la clau pública associada a la clau privada utilitzada durant el procés de login.
+$ python3 verify.py -t [tokenBearer]
 
-Validació de Correu Electrònic
-El programa utilitza una expressió regular per validar si l'adreça de correu electrònic proporcionada té un format vàlid. Si l'adreça de correu electrònic no compleix amb el format correcte (per exemple, si falta el símbol "@"), mostrarà un missatge d'error i no registrarà l'usuari.
+-t o --token: Bearer token a verificar.
+
+Assegura't de substituir [tokenBearer] amb el teu token real. També és important tenir la llibreria PyJWT instal·lada: pip install PyJWT
+
+Preparació de l'entorn i configuració inicial:
+
+-El fitxer db.json representa la base de dades d'usuaris. Si no existeix, es crearà automàticament quan s'executi algun dels scripts. Ignorar fitxers sensibles
+
+-El fitxer db.json s'ha d'afegir a l'arxiu .gitignore per a evitar que es carregui al repositori.
+
+-Fitxers de clau o .pem: S'utilitzen fitxers de clau privada i pública per a la generació de tokens. Aquests fitxers estan exclosos del repositori per raons de seguretat.
 
