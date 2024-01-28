@@ -7,4 +7,6 @@ oauthProva.py
 pem
 private.pem
 public.pem
+__pycache__/
+__pycache__
 
