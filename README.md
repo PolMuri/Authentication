@@ -4,29 +4,42 @@ Aquest programa proporciona una estructura bàsica per implementar un sistema d'
 
 # Funcionalitats
 
+# register.py
+
 -Permet registrar nous usuaris proporcionant la seva adreça de correu electrònic.
+
 -Genera un token d'autenticació únic per a cada usuari registrat.
+
 -Emmagatzema la informació dels usuaris, incloent-hi el seu correu electrònic i el token, en un fitxer de base de dades db.json.
 
 Comanda d'ús:
 
 ``python3 register.py -e "correu@exemple.com"``
 
+# init.py
+
 -Permet inicialitzar les contrasenyes per als usuaris existents.
+
 -Cerca un usuari pel seu token i guarda un hash segur de la contrasenya proporcionada a db.json.
 
 Comanda d'ús:
 
 ``python3 init.py -t token -p password``
 
+# login.py
+
 -Facilita el procés d'inici de sessió pels usuaris registrats.
+
 -Genera un token d'autorització (Bearer token) per a l'usuari proporcionat, permetent l'accés a recursos protegits.
 
 Comanda d'ús:
 
 ``python3 login.py -e correu@exemple.com -p password``
 
+# verify.py
+
 -Permet verificar un token d'autorització JWT i mostrar el seu contingut (payload).
+
 -Requereix la clau pública associada a la clau privada utilitzada durant el procés d'inici de sessió.
 
 Comanda d'ús:
