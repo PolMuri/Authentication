@@ -15,7 +15,7 @@ Comandament d'ús:
 login.py Aquest script facilita el procés de login per als usuaris registrats. Genera un token bearer d'autenticació per a l'usuari proporcionat.
 Comandament d'ús:
 
-``python3 login.py -e correu@exemple.com -p 1234``
+``python3 login.py -e correu@exemple.com -p password``
 
 verify.py Aquest script permet verificar un bearer token JWT i mostrar el seu contingut (payload). S'ha de proporcionar la clau pública associada a la clau privada utilitzada durant el procés de login.
 
