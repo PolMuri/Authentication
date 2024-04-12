@@ -1,23 +1,35 @@
-Authentication
+## Authentication
 
-Funcionalitats
+Aquest programa proporciona una estructura bàsica per implementar un sistema d'autenticació utilitzant tokens d'autenticació JWT, que és un mètode comú per autenticar usuaris i les seves credencials i gestionar-los de forma segura en aplicacions web i altres sistemes. 
 
-register.py Aquest script permet registrar nous usuaris i generar tokens d'autenticació. Utilitza el fitxer db.json com a base de dades per emmagatzemar la informació dels usuaris.
-Comandament d'ús:
+# Funcionalitats
+
+-Permet registrar nous usuaris proporcionant la seva adreça de correu electrònic.
+-Genera un token d'autenticació únic per a cada usuari registrat.
+-Emmagatzema la informació dels usuaris, incloent-hi el seu correu electrònic i el token, en un fitxer de base de dades db.json.
+
+Comanda d'ús:
 
 ``python3 register.py -e "correu@exemple.com"``
 
-init.py Aquest script permet inicialitzar contrasenyes per als usuaris existents. Busca un usuari pel seu token i emmagatzema un hash segur de la contrasenya dins de db.json.
-Comandament d'ús:
+-Permet inicialitzar les contrasenyes per als usuaris existents.
+-Cerca un usuari pel seu token i guarda un hash segur de la contrasenya proporcionada a db.json.
+
+Comanda d'ús:
 
 ``python3 init.py -t token -p password``
 
-login.py Aquest script facilita el procés de login per als usuaris registrats. Genera un token bearer d'autenticació per a l'usuari proporcionat.
-Comandament d'ús:
+-Facilita el procés d'inici de sessió pels usuaris registrats.
+-Genera un token d'autorització (Bearer token) per a l'usuari proporcionat, permetent l'accés a recursos protegits.
+
+Comanda d'ús:
 
 ``python3 login.py -e correu@exemple.com -p password``
 
-verify.py Aquest script permet verificar un bearer token JWT i mostrar el seu contingut (payload). S'ha de proporcionar la clau pública associada a la clau privada utilitzada durant el procés de login.
+-Permet verificar un token d'autorització JWT i mostrar el seu contingut (payload).
+-Requereix la clau pública associada a la clau privada utilitzada durant el procés d'inici de sessió.
+
+Comanda d'ús:
 
 ``python3 verify.py -t [tokenBearer]``
 
